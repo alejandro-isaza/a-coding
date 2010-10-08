@@ -1,4 +1,14 @@
-This project contains the sources for the articles posted in a-coding blog. Visit the blog for more information: http://a-coding.com
+This project contains the sources for the articles posted in a-coding blog.
+Visit the blog for more information: http://www.a-coding.com
 
-You will need Google Toolbox for Mac to compile: http://code.google.com/p/google-toolbox-for-mac/
+You will need Google Toolbox for Mac to compile:
+http://code.google.com/p/google-toolbox-for-mac/
 
+If the reference to the Google Toolbox for Mac is broken the
+google-toolbox-for-mac folder will be red in XCode. Just right click on it,
+choose 'Get Info' go to the 'General' tab, select 'Choose...' on the right
+and browse to the folder where you downloaded Google Toolbox for Mac.
+
+To run the unit tests: select 'Simulator' as your active SDK, select the
+'UnitTest' target and build (no need to run). Select 'Build', 'Build Results'
+to see the results of the unit tests .
