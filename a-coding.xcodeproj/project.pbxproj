@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90E19BC126142EC0097AE00 /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E19BB126142EC0097AE00 /* Observable.m */; };
+		A90E19C0126143C70097AE00 /* ObservableTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E19BF126143C70097AE00 /* ObservableTest.m */; };
+		A90E19C1126143DC0097AE00 /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E19BB126142EC0097AE00 /* Observable.m */; };
 		A97E3FA6123BF2DD0058D803 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A97E3FA5123BF2DD0058D803 /* GTMDefines.h */; };
 		A97E3FF9123BF3DE0058D803 /* GTMStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = A97E3FA8123BF3DE0058D803 /* GTMStringEncoding.h */; };
 		A97E3FFA123BF3DE0058D803 /* GTMStringEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A97E3FA9123BF3DE0058D803 /* GTMStringEncoding.m */; };
@@ -130,6 +133,9 @@
 /* Begin PBXFileReference section */
 		A90E19AD125EB76D0097AE00 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		A90E19AE125EB76D0097AE00 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A90E19BA126142EC0097AE00 /* Observable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
+		A90E19BB126142EC0097AE00 /* Observable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observable.m; sourceTree = "<group>"; };
+		A90E19BF126143C70097AE00 /* ObservableTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservableTest.m; sourceTree = "<group>"; };
 		A97E3FA5123BF2DD0058D803 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "../../google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; };
 		A97E3FA8123BF3DE0058D803 /* GTMStringEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMStringEncoding.h; sourceTree = "<group>"; };
 		A97E3FA9123BF3DE0058D803 /* GTMStringEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMStringEncoding.m; sourceTree = "<group>"; };
@@ -324,6 +330,9 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A90E19BA126142EC0097AE00 /* Observable.h */,
+				A90E19BB126142EC0097AE00 /* Observable.m */,
+				A90E19BF126143C70097AE00 /* ObservableTest.m */,
 				A97E4095123DE0300058D803 /* NSInvocation+Constructors.h */,
 				A97E4096123DE0300058D803 /* NSInvocation+Constructors.m */,
 				A97E409B123DE7110058D803 /* NSInvocation+ConstructorsTest.m */,
@@ -668,6 +677,8 @@
 				A97E40C3123DE7DF0058D803 /* GTMObjC2Runtime.m in Sources */,
 				A97E40CF123DE8930058D803 /* NSInvocation+ConstructorsTest.m in Sources */,
 				A97E40EA123DEBF90058D803 /* NSInvocation+Constructors.m in Sources */,
+				A90E19BC126142EC0097AE00 /* Observable.m in Sources */,
+				A90E19C0126143C70097AE00 /* ObservableTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +754,7 @@
 				A97E4092123BF3F20058D803 /* GTMSenTestCase.m in Sources */,
 				A97E4094123BF3F20058D803 /* GTMUnitTestDevLog.m in Sources */,
 				A97E4098123DE0300058D803 /* NSInvocation+Constructors.m in Sources */,
+				A90E19C1126143DC0097AE00 /* Observable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
