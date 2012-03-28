@@ -154,7 +154,7 @@
 
 - (void)testOptionalNotification {
 	ObservableTest_Observer* observer1 = [[[ObservableTest_Observer alloc] init] autorelease];
-	ObservableTest_Observer* observer2 = [[[ObservableTest_ExtendedObserver alloc] init] autorelease];
+	ObservableTest_ExtendedObserver* observer2 = [[[ObservableTest_ExtendedObserver alloc] init] autorelease];
 	ObservableTest_Observable* observable = [[[ObservableTest_Observable alloc] init] autorelease];
 	
 	[observable addObserver:observer1];
