@@ -14,7 +14,6 @@
 
 #import "HighlightingTextView.h"
 #import "AttributedTextView.h"
-#import "LuaSyntaxHighlighter.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -70,7 +69,6 @@
 	internalDelegate = [[HighlightingTextViewDelegate alloc] init];
 	self.delegate = internalDelegate;
 	
-	syntaxHighlighter = [[LuaSyntaxHighlighter alloc] init];
 	syntaxHighlighter.font = self.font;
 	
 	attributedTextView = [[AttributedTextView alloc] init];
