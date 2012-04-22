@@ -29,13 +29,6 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.textView.syntaxHighlighter = [[[LuaSyntaxHighligther alloc] init] autorelease];
-	self.textView.text =
-		@"-- This is a simple demonstration of syntax highlighting in iOS\n"
-		"function hairline(x)\n"
-		"  return 20*math.sin(x/20) + 100\n"
-		"end\n"
-		"\n"
-		"print(\"Hello world!\")\n";
 }
 
 - (void)viewDidUnload {

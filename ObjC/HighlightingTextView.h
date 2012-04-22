@@ -19,7 +19,6 @@
 
 
 @interface HighlightingTextView : UITextView {
-	id internalDelegate;
 	UIView* internalDocumentView;
 }
 

@@ -17,27 +17,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface HighlightingTextViewDelegate : NSObject <UITextViewDelegate>
-@end
-
-@implementation HighlightingTextViewDelegate
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-	NSString* newText = [text stringByReplacingOccurrencesOfString:@"\t" withString:@"  "];
-	if (![newText isEqualToString:text]) {
-		textView.text = [textView.text stringByReplacingCharactersInRange:range withString:newText];
-		return NO;
-	}
-	return YES;
-}
-- (void)textViewDidChange:(UITextView *)textView {
-	[textView setNeedsDisplay];
-}
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-	[scrollView setNeedsDisplay];
-}
-@end
-
-
 @interface HighlightingTextView ()
 - (void)setup;
 @end
@@ -46,6 +25,29 @@
 
 @synthesize attributedTextView;
 @synthesize syntaxHighlighter;
+
+- (void)setSyntaxHighlighter:(id<SyntaxHighlighter>)sh {
+	if (syntaxHighlighter == sh)
+		return;
+	
+	[syntaxHighlighter release];
+	syntaxHighlighter = [sh retain];
+	[self update];
+}
+
+- (void)setFont:(UIFont *)font {
+	[super setFont:font];
+	syntaxHighlighter.font = font;
+	[self update];
+}
+
+- (void)setText:(NSString *)text {
+	[super setText:text];
+	[self update];
+}
+
+
+#pragma mark -
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
@@ -66,9 +68,6 @@
 }
 
 - (void)setup {
-	internalDelegate = [[HighlightingTextViewDelegate alloc] init];
-	self.delegate = internalDelegate;
-	
 	syntaxHighlighter.font = self.font;
 	
 	attributedTextView = [[AttributedTextView alloc] init];
@@ -82,14 +81,25 @@
 		}
 	}
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(textDidChangeNotification:)
+												 name:UITextViewTextDidChangeNotification
+											   object:self];
 }
 
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	self.delegate = nil;
-	[internalDelegate release];
 	[attributedTextView release];
 	[syntaxHighlighter release];
 	[super dealloc];
+}
+
+
+#pragma mark -
+
+- (void)awakeFromNib {
+	[self update];
 }
 
 - (void)layoutSubviews {
@@ -98,20 +108,13 @@
 	attributedTextView.center = internalDocumentView.center;
 }
 
-- (void)setNeedsDisplay {
-	[super setNeedsDisplay];
+- (void)textDidChangeNotification:(NSNotification*)notification {
+	[self update];
+}
+
+- (void)update {
 	attributedTextView.string = [syntaxHighlighter highlight:self.text];
 	[attributedTextView setNeedsDisplay];
-}
-
-- (void)setFont:(UIFont *)font {
-	[super setFont:font];
-	syntaxHighlighter.font = font;
-}
-
-- (void)setText:(NSString *)text {
-	[super setText:text];
-	attributedTextView.string = [syntaxHighlighter highlight:self.text];
 }
 
 @end

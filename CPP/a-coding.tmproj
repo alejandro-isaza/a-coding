@@ -3,52 +3,52 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>bimap_open_list.h</string>
+	<string>property_map_open_list.h</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>Makefile</string>
 			<key>lastUsed</key>
-			<date>2010-12-24T06:15:35Z</date>
+			<date>2012-02-01T00:54:25Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>graph.h</string>
 			<key>lastUsed</key>
-			<date>2010-12-22T06:23:28Z</date>
+			<date>2012-02-01T00:50:05Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>manhattan_distance.h</string>
 			<key>lastUsed</key>
-			<date>2010-12-24T07:00:31Z</date>
+			<date>2012-01-30T23:00:28Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>bimap_open_list.h</string>
 			<key>lastUsed</key>
-			<date>2010-12-24T07:05:52Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2012-01-30T23:00:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>property_map_open_list.h</string>
 			<key>lastUsed</key>
-			<date>2010-12-24T07:02:08Z</date>
+			<date>2012-02-01T01:00:03Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>astar.h</string>
 			<key>lastUsed</key>
-			<date>2010-12-24T06:50:22Z</date>
+			<date>2012-01-30T23:00:38Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>grid_graph.h</string>
 			<key>lastUsed</key>
-			<date>2010-12-24T06:14:30Z</date>
+			<date>2012-01-30T23:00:41Z</date>
 		</dict>
 		<dict>
 			<key>expanded</key>
@@ -70,23 +70,39 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>90</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>0</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>7</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>23</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 		<key>astar.h</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>58</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -98,23 +114,53 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>27</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>10</integer>
+			<integer>0</integer>
+		</dict>
+		<key>graph.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 		<key>grid_graph.h</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -126,9 +172,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>12</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -140,59 +186,43 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>14</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
-				<key>line</key>
-				<integer>7</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>29</integer>
-				<key>line</key>
-				<integer>7</integer>
-			</dict>
 		</dict>
 		<key>test/astar_test.cpp</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
 				<integer>0</integer>
+				<key>line</key>
+				<integer>19</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>14</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>23</integer>
+				<integer>29</integer>
 				<key>line</key>
-				<integer>1</integer>
+				<integer>20</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
 				<integer>0</integer>
+				<key>line</key>
+				<integer>19</integer>
 			</dict>
 		</dict>
 		<key>test/grid_graph_test.cpp</key>
@@ -200,9 +230,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>8</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -214,14 +244,44 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>21</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>test/test_runner.cpp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -230,15 +290,17 @@
 		<string>astar.h</string>
 		<string>property_map_open_list.h</string>
 		<string>test/open_list_test.cpp</string>
+		<string>graph.h</string>
 		<string>manhattan_distance.h</string>
 		<string>Makefile</string>
 		<string>grid_graph.h</string>
 		<string>test/astar_test.cpp</string>
+		<string>test/test_runner.cpp</string>
 		<string>bimap_open_list.h</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{420, 596}, {1280, 681}}</string>
+	<string>{{549, 582}, {1280, 681}}</string>
 </dict>
 </plist>
