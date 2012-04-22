@@ -12,6 +12,14 @@
 		A90477651523C5360034D5C4 /* HighlightingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A904775E1523C5360034D5C4 /* HighlightingTextView.m */; };
 		A90477661523C5360034D5C4 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A904775F1523C5360034D5C4 /* AttributedTextView.h */; };
 		A90477671523C5360034D5C4 /* AttributedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A90477601523C5360034D5C4 /* AttributedTextView.m */; };
+		A904777B1523D0700034D5C4 /* GTMDebugSelectorValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = A90477731523D0700034D5C4 /* GTMDebugSelectorValidation.h */; };
+		A904777C1523D0700034D5C4 /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = A90477741523D0700034D5C4 /* GTMDebugThreadValidation.h */; };
+		A904777D1523D0700034D5C4 /* GTMDebugThreadValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = A90477751523D0700034D5C4 /* GTMDebugThreadValidation.m */; };
+		A904777E1523D0700034D5C4 /* GTMDebugThreadValidationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A90477761523D0700034D5C4 /* GTMDebugThreadValidationTest.m */; };
+		A904777F1523D0700034D5C4 /* GTMMethodCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = A90477771523D0700034D5C4 /* GTMMethodCheck.h */; };
+		A90477801523D0700034D5C4 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = A90477781523D0700034D5C4 /* GTMMethodCheck.m */; };
+		A90477811523D0700034D5C4 /* GTMMethodCheckTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A90477791523D0700034D5C4 /* GTMMethodCheckTest.m */; };
+		A90477821523D0700034D5C4 /* GTMTypeCasting.h in Headers */ = {isa = PBXBuildFile; fileRef = A904777A1523D0700034D5C4 /* GTMTypeCasting.h */; };
 		A90E19BC126142EC0097AE00 /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E19BB126142EC0097AE00 /* Observable.m */; };
 		A90E19C0126143C70097AE00 /* ObservableTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E19BF126143C70097AE00 /* ObservableTest.m */; };
 		A90E19C1126143DC0097AE00 /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = A90E19BB126142EC0097AE00 /* Observable.m */; };
@@ -141,6 +149,14 @@
 		A904775E1523C5360034D5C4 /* HighlightingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightingTextView.m; sourceTree = "<group>"; };
 		A904775F1523C5360034D5C4 /* AttributedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedTextView.h; sourceTree = "<group>"; };
 		A90477601523C5360034D5C4 /* AttributedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedTextView.m; sourceTree = "<group>"; };
+		A90477731523D0700034D5C4 /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
+		A90477741523D0700034D5C4 /* GTMDebugThreadValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDebugThreadValidation.h; sourceTree = "<group>"; };
+		A90477751523D0700034D5C4 /* GTMDebugThreadValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMDebugThreadValidation.m; sourceTree = "<group>"; };
+		A90477761523D0700034D5C4 /* GTMDebugThreadValidationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMDebugThreadValidationTest.m; sourceTree = "<group>"; };
+		A90477771523D0700034D5C4 /* GTMMethodCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMMethodCheck.h; sourceTree = "<group>"; };
+		A90477781523D0700034D5C4 /* GTMMethodCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMMethodCheck.m; sourceTree = "<group>"; };
+		A90477791523D0700034D5C4 /* GTMMethodCheckTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMMethodCheckTest.m; sourceTree = "<group>"; };
+		A904777A1523D0700034D5C4 /* GTMTypeCasting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMTypeCasting.h; sourceTree = "<group>"; };
 		A90E19AD125EB76D0097AE00 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		A90E19AE125EB76D0097AE00 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A90E19BA126142EC0097AE00 /* Observable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
@@ -363,9 +379,25 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		A90477721523D0700034D5C4 /* DebugUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A90477731523D0700034D5C4 /* GTMDebugSelectorValidation.h */,
+				A90477741523D0700034D5C4 /* GTMDebugThreadValidation.h */,
+				A90477751523D0700034D5C4 /* GTMDebugThreadValidation.m */,
+				A90477761523D0700034D5C4 /* GTMDebugThreadValidationTest.m */,
+				A90477771523D0700034D5C4 /* GTMMethodCheck.h */,
+				A90477781523D0700034D5C4 /* GTMMethodCheck.m */,
+				A90477791523D0700034D5C4 /* GTMMethodCheckTest.m */,
+				A904777A1523D0700034D5C4 /* GTMTypeCasting.h */,
+			);
+			path = DebugUtils;
+			sourceTree = "<group>";
+		};
 		A97E3FA4123BF2CD0058D803 /* google-toolbox-for-mac */ = {
 			isa = PBXGroup;
 			children = (
+				A90477721523D0700034D5C4 /* DebugUtils */,
 				A97E3FA5123BF2DD0058D803 /* GTMDefines.h */,
 				A97E3FA7123BF3DE0058D803 /* Foundation */,
 				A97E404A123BF3E90058D803 /* iPhone */,
@@ -596,6 +628,10 @@
 				A90477611523C5360034D5C4 /* SyntaxHighlighter.h in Headers */,
 				A90477641523C5360034D5C4 /* HighlightingTextView.h in Headers */,
 				A90477661523C5360034D5C4 /* AttributedTextView.h in Headers */,
+				A904777B1523D0700034D5C4 /* GTMDebugSelectorValidation.h in Headers */,
+				A904777C1523D0700034D5C4 /* GTMDebugThreadValidation.h in Headers */,
+				A904777F1523D0700034D5C4 /* GTMMethodCheck.h in Headers */,
+				A90477821523D0700034D5C4 /* GTMTypeCasting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +821,10 @@
 				A90E19C1126143DC0097AE00 /* Observable.m in Sources */,
 				A90477651523C5360034D5C4 /* HighlightingTextView.m in Sources */,
 				A90477671523C5360034D5C4 /* AttributedTextView.m in Sources */,
+				A904777D1523D0700034D5C4 /* GTMDebugThreadValidation.m in Sources */,
+				A904777E1523D0700034D5C4 /* GTMDebugThreadValidationTest.m in Sources */,
+				A90477801523D0700034D5C4 /* GTMMethodCheck.m in Sources */,
+				A90477811523D0700034D5C4 /* GTMMethodCheckTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

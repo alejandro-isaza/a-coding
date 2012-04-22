@@ -52,6 +52,9 @@ static CGFloat MARGIN = 8;
 }
 
 - (void)drawRect:(CGRect)rect {
+	if (string.length == 0)
+		return;
+	
 	// flip the coordinate system
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -63,7 +66,7 @@ static CGFloat MARGIN = 8;
 	CGRect r = CGRectMake(MARGIN, MARGIN, size.width - 2*MARGIN, size.height - 2*MARGIN);
 	
 	// Get line height
-	CTFontRef font = (__bridge CTFontRef)[string attribute:(__bridge id)kCTFontAttributeName atIndex:0 effectiveRange:NULL];
+	CTFontRef font = (CTFontRef)[string attribute:(id)kCTFontAttributeName atIndex:0 effectiveRange:NULL];
 	CGFloat lineHeight = [[self class] lineHeight:font];
 	
 	// Draw lines
@@ -98,7 +101,7 @@ static CGFloat MARGIN = 8;
 	NSAttributedString* s = [string attributedSubstringFromRange:range];
 	
 	// Draw line
-	CTLineRef line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)s);
+	CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)s);
 	CGContextSetTextPosition(context, MARGIN, offset);
 	CTLineDraw(line, context);
 	CFRelease(line);
