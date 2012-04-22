@@ -52,20 +52,24 @@
 	
 	NSMutableAttributedString* string = [[NSMutableAttributedString alloc] initWithString:text];
 	NSUInteger length = [string length];
-	
-	// Set default attributes for all text
 	NSRange wholeRange = NSMakeRange(0, length);
+	
+	// The font has to match what is set for the text vuew
 	CTFontRef ctFont = CTFontCreateWithName((__bridge CFStringRef)_font.familyName, _font.pointSize, NULL);
 	[string addAttribute:(id)kCTFontAttributeName
 				   value:(__bridge id)ctFont
 				   range:wholeRange];
+	CFRelease(ctFont);
+	
+	// Set the default text color
 	[string addAttribute:(id)kCTForegroundColorAttributeName
 				   value:(__bridge id)_defaultColor.CGColor
 				   range:wholeRange];
+	
+	// Disable ligatures if you are using a fixed-width font
 	[string addAttribute:(id)kCTLigatureAttributeName
 				   value:[NSNumber numberWithInt:0]
 				   range:wholeRange];
-	CFRelease(ctFont);
 	
 	// Set of highlighted keywords
 	NSSet* keywords = [NSSet setWithObjects:
