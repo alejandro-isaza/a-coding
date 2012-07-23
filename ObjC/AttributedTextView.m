@@ -72,39 +72,57 @@ static CGFloat MARGIN = 8;
 	// Draw lines
 	CGFloat y = r.size.height - MARGIN + 2;
 	NSCharacterSet* cs = [NSCharacterSet newlineCharacterSet];
+	NSCharacterSet* wscs = [NSCharacterSet whitespaceCharacterSet];
 	NSRange range = NSMakeRange(0, string.length);
-	while (true) {
+	while (range.length > 0) {
 		// Find next line break
+		NSUInteger len;
 		NSRange next = [string.string rangeOfCharacterFromSet:cs options:NSLiteralSearch range:range];
 		if (next.location == NSNotFound)
-			break;
+			len = range.length;
+		else
+			len = next.location - range.location;
 		
-		// Keep track of ranges
-		NSUInteger len = next.location - range.location;
+		// Empty line, just skip
+		if (len == 0) {
+			range.location += 1;
+			range.length -=  1;
+			y -= lineHeight;
+			continue;
+		}
+		
+		// Get one line of text
 		NSRange lineRange = NSMakeRange(range.location, len);
-		range.location += len + 1;
-		range.length -= len + 1;
+		NSAttributedString* s = [string attributedSubstringFromRange:lineRange];
+		CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)s);
+		CGRect lineRect = CTLineGetImageBounds(line, context);
+		while (lineRange.length > 0 && lineRect.size.width > rect.size.width - 16) {
+			// Line doesn't fit, wrap
+			NSRange wsRange = [string.string rangeOfCharacterFromSet:wscs options:NSBackwardsSearch range:lineRange];
+			if (wsRange.length == 0)
+				len -= 1;
+			else
+				len = wsRange.location - lineRange.location;
+			
+			// Get shorter line of text
+			lineRange.length = len;
+			s = [string attributedSubstringFromRange:lineRange];
+			CFRelease(line);
+			line = CTLineCreateWithAttributedString((CFAttributedStringRef)s);
+			lineRect = CTLineGetImageBounds(line, context);
+		}
 		
-		// Draw line
-		if (len > 0)
-			[self drawLine:lineRange offset:y context:context];
+		// Adjust range
+		range.location += len + 1;
+		range.length -= MIN(range.length, len + 1);
+		
+		// Draw
+		CGContextSetTextPosition(context, MARGIN, y);
+		CTLineDraw(line, context);
+		CFRelease(line);
+		
 		y -= lineHeight;
 	}
-	
-	// Draw last line
-	if (range.length > 0)
-		[self drawLine:range offset:y context:context];
-}
-
-- (void)drawLine:(NSRange)range offset:(CGFloat)offset context:(CGContextRef)context {
-	// Get one line of text
-	NSAttributedString* s = [string attributedSubstringFromRange:range];
-	
-	// Draw line
-	CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)s);
-	CGContextSetTextPosition(context, MARGIN, offset);
-	CTLineDraw(line, context);
-	CFRelease(line);
 }
 
 + (CGFloat)lineHeight:(CTFontRef)font {
