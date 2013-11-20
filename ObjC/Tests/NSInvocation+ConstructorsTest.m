@@ -12,7 +12,7 @@
 //  License for the specific language governing permissions and limitations under
 //  the License.
 
-#import "GTMSenTestCase.h"
+#import <XCTest/XCTest.h>
 #import "NSInvocation+Constructors.h"
 
 @protocol NSInvocation_Constructors_TestProtocol
@@ -47,7 +47,7 @@
 
 
 
-@interface NSInvocation_ConstructorsTest : GTMTestCase
+@interface NSInvocation_ConstructorsTest : XCTestCase
 @end
 
 
@@ -56,19 +56,19 @@
 - (void)testTargetSelectorContstructor {
 	NSInvocation_Constructors_TestClass* object = [[[NSInvocation_Constructors_TestClass alloc] init] autorelease];
 	NSInvocation* inv = [NSInvocation invocationWithTarget:object selector:@selector(classMethod)];
-	STAssertNotNil(inv, nil);
+	XCTAssertNotNil(inv, @"");
 	
 	[inv invoke];
 	
 	NSString* string;
 	[inv getReturnValue:&string];
 	
-	STAssertEqualStrings(string, @"classMethod", nil);
+	XCTAssertEqualObjects(string, @"classMethod", @"");
 }
 
 - (void)testClassSelectorConstructor {
 	NSInvocation* inv = [NSInvocation invocationWithClass:[NSInvocation_Constructors_TestClass class] selector:@selector(classMethod)];
-	STAssertNotNil(inv, nil);
+	XCTAssertNotNil(inv, @"");
 	
 	NSInvocation_Constructors_TestClass* impl = [[[NSInvocation_Constructors_TestClass alloc] init] autorelease];
 	[inv setTarget:impl];
@@ -77,17 +77,17 @@
 	NSString* string;
 	[inv getReturnValue:&string];
 	
-	STAssertEqualStrings(string, @"classMethod", nil);
+	XCTAssertEqualObjects(string, @"classMethod", @"");
 }
 
 - (void)testInvalidClassSelectorConstructor {
 	NSInvocation* inv = [NSInvocation invocationWithClass:[NSInvocation_Constructors_TestClass class] selector:@selector(requiredMethod)];
-	STAssertNil(inv, nil);
+	XCTAssertNil(inv, @"");
 }
 
 - (void)testProtocolSelectorConstructorWithRequiredMethod {
 	NSInvocation* inv = [NSInvocation invocationWithProtocol:@protocol(NSInvocation_Constructors_TestProtocol) selector:@selector(requiredMethod)];
-	STAssertNotNil(inv, nil);
+	XCTAssertNotNil(inv, @"");
 	
 	NSInvocation_Constructors_TestProtocolImpl* impl = [[[NSInvocation_Constructors_TestProtocolImpl alloc] init] autorelease];
 	[inv setTarget:impl];
@@ -96,12 +96,12 @@
 	NSString* string;
 	[inv getReturnValue:&string];
 	
-	STAssertEqualStrings(string, @"requiredMethod", nil);
+	XCTAssertEqualObjects(string, @"requiredMethod", @"");
 }
 
 - (void)testProtocolSelectorConstructorWithOptionalMethod {
 	NSInvocation* inv = [NSInvocation invocationWithProtocol:@protocol(NSInvocation_Constructors_TestProtocol) selector:@selector(optionalMethod)];
-	STAssertNotNil(inv, nil);
+	XCTAssertNotNil(inv, @"");
 	
 	NSInvocation_Constructors_TestProtocolImpl* imp = [[[NSInvocation_Constructors_TestProtocolImpl alloc] init] autorelease];
 	[inv setTarget:imp];
@@ -110,12 +110,12 @@
 	NSString* string;
 	[inv getReturnValue:&string];
 	
-	STAssertEqualStrings(string, @"optionalMethod", nil);
+	XCTAssertEqualObjects(string, @"optionalMethod", @"");
 }
 
 - (void)testProtocolSelectorConstructorWithInvalidMethod {
 	NSInvocation* inv = [NSInvocation invocationWithProtocol:@protocol(NSInvocation_Constructors_TestProtocol) selector:@selector(classMethod)];
-	STAssertNil(inv, nil);
+	XCTAssertNil(inv, @"");
 }
 
 @end

@@ -13,7 +13,7 @@
 //  the License.
 
 #import "NSInvocation+Constructors.h"
-#import "GTMObjC2Runtime.h"
+#import "objc/runtime.h"
 
 @implementation NSInvocation (Constructors)
 

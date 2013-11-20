@@ -12,8 +12,7 @@
 //  License for the specific language governing permissions and limitations under
 //  the License.
 
-
-#import "GTMSenTestCase.h"
+#import <XCTest/XCTest.h>
 #import "Observable.h"
 #import "NSInvocation+Constructors.h"
 
@@ -136,7 +135,7 @@
 
 #pragma mark -
 #pragma mark ObservableTest
-@interface ObservableTest : GTMTestCase
+@interface ObservableTest : XCTestCase
 @end
 
 @implementation ObservableTest
@@ -149,7 +148,7 @@
 	[observable notifyObservers:[NSInvocation invocationWithProtocol:@protocol(ObservableTest_ObserverProtocol)
 															selector:@selector(notification)]];
 	
-	STAssertTrue(observer.notified, nil);
+	XCTAssertTrue(observer.notified, @"");
 }
 
 - (void)testOptionalNotification {
@@ -167,8 +166,8 @@
 	[observable notifyObservers:inv];
 	
 	// 'observer1' does not implement the optional method, so it should not be notified
-	STAssertFalse(observer1.notified, nil);
-	STAssertTrue(observer2.notified, nil);
+	XCTAssertFalse(observer1.notified, @"");
+	XCTAssertTrue(observer2.notified, @"");
 }
 
 - (void)testObserverRemoving {
@@ -182,8 +181,8 @@
 															selector:@selector(notification)]];
 	
 	// Both observers are notified
-	STAssertTrue(observer1.notified, nil);
-	STAssertTrue(observer2.notified, nil);
+	XCTAssertTrue(observer1.notified, @"");
+	XCTAssertTrue(observer2.notified, @"");
 	
 	observer1.notified = NO;
 	observer2.notified = NO;
@@ -192,8 +191,8 @@
 															selector:@selector(notification)]];
 	
 	// After removing 'observer2' it is no longer notified
-	STAssertFalse(observer1.notified, nil);
-	STAssertTrue(observer2.notified, nil);
+	XCTAssertFalse(observer1.notified, @"");
+	XCTAssertTrue(observer2.notified, @"");
 }
 
 - (void)testLiveRemoval {
@@ -212,8 +211,8 @@
 	
 	// The order of the notifications cannot be guaranteed, but either the observer was notified before it was removed
 	// or it was not notified at all.
-	STAssertTrue(removingObserver.observerToRemoveWasNotified || !observer.notified, nil);
-	STAssertTrue(removingObserver.notified, nil);
+	XCTAssertTrue(removingObserver.observerToRemoveWasNotified || !observer.notified, @"");
+	XCTAssertTrue(removingObserver.notified, @"");
 }
 
 - (void)testLiveAddition {
@@ -230,16 +229,16 @@
 															selector:@selector(notification)]];
 	
 	// 'observer' is not notified on the first run, it was just added
-	STAssertFalse(observer.notified, nil);
-	STAssertTrue(addingObserver.notified, nil);
+	XCTAssertFalse(observer.notified, @"");
+	XCTAssertTrue(addingObserver.notified, @"");
 	
 	addingObserver.notified = NO;
 	[observable notifyObservers:[NSInvocation invocationWithProtocol:@protocol(ObservableTest_ObserverProtocol)
 															selector:@selector(notification)]];
 	
 	// But it's notified on the second run
-	STAssertTrue(observer.notified, nil);
-	STAssertTrue(addingObserver.notified, nil);
+	XCTAssertTrue(observer.notified, @"");
+	XCTAssertTrue(addingObserver.notified, @"");
 }
 
 @end

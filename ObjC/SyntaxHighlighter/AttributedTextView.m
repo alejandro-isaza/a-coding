@@ -18,10 +18,6 @@
 static CGFloat MARGIN = 8;
 
 
-@interface AttributedTextView ()
-- (void)drawLine:(NSRange)range offset:(CGFloat)offset context:(CGContextRef)context;
-@end
-
 @implementation AttributedTextView
 
 @synthesize string;
