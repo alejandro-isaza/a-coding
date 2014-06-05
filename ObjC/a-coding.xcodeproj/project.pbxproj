@@ -14,11 +14,6 @@
 		A9B2C1CE183C72ED00775F34 /* liba-coding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* liba-coding.a */; };
 		A9B2C1D1183C739B00775F34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B2C17B183C701100775F34 /* CoreGraphics.framework */; };
 		A9B2C1D3183C73CA00775F34 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B2C1D2183C73CA00775F34 /* CoreText.framework */; };
-		A9B2C1DF183C75A700775F34 /* AttributedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B2C1D5183C75A700775F34 /* AttributedTextView.h */; };
-		A9B2C1E0183C75A700775F34 /* AttributedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B2C1D6183C75A700775F34 /* AttributedTextView.m */; };
-		A9B2C1E1183C75A700775F34 /* HighlightingTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B2C1D7183C75A700775F34 /* HighlightingTextView.h */; };
-		A9B2C1E2183C75A700775F34 /* HighlightingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B2C1D8183C75A700775F34 /* HighlightingTextView.m */; };
-		A9B2C1E3183C75A700775F34 /* SyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B2C1D9183C75A700775F34 /* SyntaxHighlighter.h */; };
 		A9B2C1E4183C75A700775F34 /* NSInvocation+Constructors.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B2C1DB183C75A700775F34 /* NSInvocation+Constructors.h */; };
 		A9B2C1E5183C75A700775F34 /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B2C1DC183C75A700775F34 /* NSInvocation+Constructors.m */; };
 		A9B2C1E6183C75A700775F34 /* Observable.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B2C1DD183C75A700775F34 /* Observable.h */; };
@@ -52,11 +47,6 @@
 		A9B2C1C4183C72E700775F34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9B2C1C8183C72E700775F34 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		A9B2C1D2183C73CA00775F34 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		A9B2C1D5183C75A700775F34 /* AttributedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedTextView.h; sourceTree = "<group>"; };
-		A9B2C1D6183C75A700775F34 /* AttributedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedTextView.m; sourceTree = "<group>"; };
-		A9B2C1D7183C75A700775F34 /* HighlightingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighlightingTextView.h; sourceTree = "<group>"; };
-		A9B2C1D8183C75A700775F34 /* HighlightingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightingTextView.m; sourceTree = "<group>"; };
-		A9B2C1D9183C75A700775F34 /* SyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyntaxHighlighter.h; sourceTree = "<group>"; };
 		A9B2C1DB183C75A700775F34 /* NSInvocation+Constructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Constructors.h"; sourceTree = "<group>"; };
 		A9B2C1DC183C75A700775F34 /* NSInvocation+Constructors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Constructors.m"; sourceTree = "<group>"; };
 		A9B2C1DD183C75A700775F34 /* Observable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
@@ -108,7 +98,6 @@
 				A90E19AD125EB76D0097AE00 /* COPYING */,
 				A90E19AE125EB76D0097AE00 /* README */,
 				AA747D9E0F9514B9006C5449 /* a-coding_Prefix.pch */,
-				A9B2C1D4183C75A700775F34 /* SyntaxHighlighter */,
 				A9B2C1DA183C75A700775F34 /* Invocations */,
 				A9B2C1C0183C72E700775F34 /* Tests */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -151,18 +140,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A9B2C1D4183C75A700775F34 /* SyntaxHighlighter */ = {
-			isa = PBXGroup;
-			children = (
-				A9B2C1D9183C75A700775F34 /* SyntaxHighlighter.h */,
-				A9B2C1D5183C75A700775F34 /* AttributedTextView.h */,
-				A9B2C1D6183C75A700775F34 /* AttributedTextView.m */,
-				A9B2C1D7183C75A700775F34 /* HighlightingTextView.h */,
-				A9B2C1D8183C75A700775F34 /* HighlightingTextView.m */,
-			);
-			path = SyntaxHighlighter;
-			sourceTree = "<group>";
-		};
 		A9B2C1DA183C75A700775F34 /* Invocations */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,12 +158,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9B2C1E1183C75A700775F34 /* HighlightingTextView.h in Headers */,
 				A9B2C1E4183C75A700775F34 /* NSInvocation+Constructors.h in Headers */,
-				A9B2C1DF183C75A700775F34 /* AttributedTextView.h in Headers */,
 				A9B2C1E6183C75A700775F34 /* Observable.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* a-coding_Prefix.pch in Headers */,
-				A9B2C1E3183C75A700775F34 /* SyntaxHighlighter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,9 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B2C1E7183C75A700775F34 /* Observable.m in Sources */,
-				A9B2C1E0183C75A700775F34 /* AttributedTextView.m in Sources */,
 				A9B2C1E5183C75A700775F34 /* NSInvocation+Constructors.m in Sources */,
-				A9B2C1E2183C75A700775F34 /* HighlightingTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +478,7 @@
 				A9B2C1CD183C72E700775F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
